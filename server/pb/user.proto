@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "messages";
+
+message ObjectId {
+    uint64 uid = 1;
+}
+
+message User {
+    ObjectId object_id = 1;
+    string email = 2;
+    string password = 3;
+}
+
+service UserService {
+    rpc Add(User) returns (User);
+    rpc Find(ObjectId) returns (User);
+    rpc Update(User) returns (User);
+    rpc Delete(ObjectId) returns (ObjectId);
+}
