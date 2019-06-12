@@ -3,7 +3,7 @@
 ## Dep:
 
 ```bash
-    go get -u -v github.com/golang/protobuf
+    go get -u -v github.com/golang/protobuf/protoc-gen-go
 
     go get -u -v github.com/golang/protobuf/proto
 
